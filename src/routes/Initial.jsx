@@ -1,9 +1,11 @@
-import {} from 'react'
+import {  } from 'react'
 // Link temporário (excluir)
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 // Link temporário (excluir)
 
-function Register() {
+function Initial() {
+  
+
   return (
     <>
       {/* Links temporários (excluir) */}
@@ -17,4 +19,5 @@ function Register() {
     </>
   )
 }
-export default Register;
+
+export default Initial

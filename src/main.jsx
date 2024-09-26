@@ -1,8 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvinder } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import Error from './routes/Error.jsx'
+import Initial from './routes/Initial.jsx'
 import Login from './routes/Login.jsx'
 import Register from './routes/Register.jsx'
 import Authentication from './routes/Authentication.jsx'
@@ -15,9 +16,10 @@ const router = createBrowserRouter([
     path:'/', element:<App />,
     // Rota de erro
     errorElement:<Error />,
-
+    
     // Rotas filhas
-    children:[
+    children: [
+      {path:'/', element:<Initial />},
       {path:'/Login', element:<Login />},
       {path:'/Register', element:<Register />},
       {path:'/Authentication', element:<Authentication />},
@@ -29,6 +31,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvinder router={router} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
