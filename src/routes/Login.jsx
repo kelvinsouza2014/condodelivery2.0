@@ -19,7 +19,7 @@ function Login() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/login', { // Substitua pela URL do back-end
+      const response = await fetch('http://localhost:5000/api/login', { // Link do Back-End
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,6 @@ function Login() {
 
       if (response.ok) {
         const data = await response.json();
-        // Armazene o token (JWT) no sessionStorage ou localStorage
         sessionStorage.setItem('token', data.token);
         alert('Login bem-sucedido!');
         navigate('/initial'); // Redireciona para a tela inicial após login
