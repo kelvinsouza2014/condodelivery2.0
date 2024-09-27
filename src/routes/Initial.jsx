@@ -1,6 +1,7 @@
 // import {  } from 'react'
 import Help from '../components/Help.jsx'
 import Mark00 from '../components/Mark00.jsx';
+import Credits from '../components/Credits.jsx';
 import TemporaryLinks from '../components/TemporaryLinks';
 
 function Initial() {
@@ -15,6 +16,7 @@ function Initial() {
       <div>
       <p>A sua entrega rápida, cômoda e segura!</p>
       </div>
+      <Credits />
     </>
   )
 }
