@@ -31,16 +31,22 @@ function Authentication() {
       {/* <h1>Autenticação</h1> */}
       <Help />
       <Mark01 />
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          maxLength={6} // Limitar a entrada a 6 caracteres
-          placeholder="Digite o código"
-          value={token}
-          onChange={(e) => setToken(e.target.value)}
-        />
-        <button type="submit">Avançar</button>
-      </form>
+      <section>
+        <div>
+          <p>Insira o código de 6 dígitos que enviamos para o seu numero que termina em 6789, para concluir a configuração de autenticação de dois fatores.
+          </p>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            maxLength={6} // Limitar a entrada a 6 caracteres
+            placeholder="Digite o código"
+            value={token}
+            onChange={(e) => setToken(e.target.value)}
+            />
+          <button type="submit">Avançar</button>
+        </form>
+      </section>
       <Credits />
     </>
   )
