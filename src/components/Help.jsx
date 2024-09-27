@@ -6,6 +6,7 @@ function Help() {
   return (
     <>
       <FontAwesomeIcon icon={faCircleQuestion} />
+      <a href="#">Ajuda</a>
     </>
   )
 }
