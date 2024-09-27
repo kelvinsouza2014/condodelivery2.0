@@ -31,7 +31,7 @@ function Login() {
         const data = await response.json();
         sessionStorage.setItem('token', data.token);
         alert('Login bem-sucedido!');
-        navigate('/initial'); // Redireciona para a tela inicial após login
+        navigate('/Orders'); // Redireciona para a tela inicial da aplicação
       } else {
         alert('Usuário ou senha incorretos!');
       }
