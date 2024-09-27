@@ -12,14 +12,14 @@ import NewOrder from './routes/NewOrder.jsx'
 
 const router = createBrowserRouter([
   {
-    // Rota principal / Mãe
+    // Rota principal / Pai
     path:'/', element:<App />,
     // Rota de erro
     errorElement:<Error />,
     
     // Rotas filhas
     children: [
-      {path:'/', element:<Initial />},
+      {index:true, element:<Initial />}, // Rota inicial
       {path:'/Login', element:<Login />},
       {path:'/Register', element:<Register />},
       {path:'/Authentication', element:<Authentication />},

@@ -1,4 +1,4 @@
-import {} from 'react'
+// import {} from 'react'
 
 function Error() {
   return (
