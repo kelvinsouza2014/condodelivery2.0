@@ -14,7 +14,7 @@ function Initial() {
       <Help />
       <Mark00 />
       <div>
-      <p>A sua entrega rápida, cômoda e segura!</p>
+        <p>A sua entrega rápida, cômoda e segura!</p>
       </div>
       <Credits />
     </>
