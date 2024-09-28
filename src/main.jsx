@@ -9,8 +9,8 @@ import Register from './routes/Register.jsx'
 import Authentication from './routes/Authentication.jsx'
 import Orders from './routes/Orders.jsx'
 import NewOrder from './routes/NewOrder.jsx'
-import EditOrder from './routes/NewOrder.jsx'
-import DeleteOrder from './routes/NewOrder.jsx'
+import EditOrder from './routes/EditOrder.jsx'
+import DeleteOrder from './routes/DeleteOrder.jsx'
 
 const router = createBrowserRouter([
   {

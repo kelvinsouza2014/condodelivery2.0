@@ -111,11 +111,11 @@ function NewOrder() {
                 />
             </label>
           </p>
-            <button type="submit">Novo Pedido</button>
-        </form>
           <div>
+            <button type="submit">Novo Pedido</button>
             <button onClick={() => navigate("/Orders")}>Cancelar Pedido</button>
           </div>
+        </form>
       </section>
     </>
   )
