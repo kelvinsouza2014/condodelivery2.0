@@ -1,5 +1,3 @@
-// import {  } from 'react'
-
 function AppTitle() {
   return (
     <>

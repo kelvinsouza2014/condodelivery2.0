@@ -1,7 +1,6 @@
-// import {  } from 'react';
-// Link temporário (excluir)
+// Link (Desenvolvimento)
 import { Link } from 'react-router-dom';
-// Link temporário (excluir)
+// Link (Desenvolvimento)
 
 function TemporaryLinks() {
   return (

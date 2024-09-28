@@ -75,6 +75,7 @@ function Register() {
           </label>
           <br />
           <button type="submit">Cadastrar</button>
+          <button onClick={() => navigate("/Login")}>Fazer login</button>
         </form>
     </div>
     </>

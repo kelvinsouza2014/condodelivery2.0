@@ -33,14 +33,14 @@ const handleDelete =(e)=>{
   return (
     <section>
       <div>
-        <p>Nome {order.name}</p>
-        <p>Code {order.code}</p>
-        <p>Block {order.block}</p>
-        <p>Apartament {order.apartament}</p>
-        <p>Carrier {order.carrier}</p>
+        <p>Nome: {order.name}</p>
+        <p>Código do pedido: {order.code}</p>
+        <p>Bloco do condomínio: {order.block}</p>
+        <p>Número do apartamento: {order.apartament}</p>
+        <p>Nome da transportadora: {order.carrier}</p>
       </div>
       <div>
-        <button onClick={handleDelete}>Excluir</button>
+        <button onClick={handleDelete}>Excluir Pedido</button>
         <button onClick={() => navigate("/Orders")}>Cancelar Pedido</button>
       </div>
     </section>

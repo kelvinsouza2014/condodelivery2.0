@@ -1,5 +1,3 @@
-import {} from 'react'
-
 function Credits() {
   return (
     <>

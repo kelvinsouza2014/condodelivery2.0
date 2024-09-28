@@ -110,7 +110,7 @@ const handleSubmit =(e)=>{
             </label>
           </p>
           <div>
-            <button type="submit">Editar</button>
+            <button type="submit">Salvar</button>
             <button onClick={() => navigate("/Orders")}>Cancelar Pedido</button>
           </div>
         </form>

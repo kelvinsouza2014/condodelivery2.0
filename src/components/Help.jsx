@@ -1,4 +1,3 @@
-import {} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleQuestion as Question } from '@fortawesome/free-solid-svg-icons';
 

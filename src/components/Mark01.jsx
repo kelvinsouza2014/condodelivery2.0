@@ -1,5 +1,3 @@
-import {} from 'react'
-
 function Mark01() {
   return (
     <>

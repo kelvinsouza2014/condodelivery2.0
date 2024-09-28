@@ -1,5 +1,4 @@
 import TemporaryLinks from '../components/TemporaryLinks';
-// import {} from 'react'
 import AppTitle from '../components/AppTitle';
 import { useState } from 'react';
 import { Tickets } from '../components/Tickets';
