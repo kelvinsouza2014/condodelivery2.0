@@ -1,4 +1,3 @@
-// import {} from 'react'
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Tickets } from '../components/Tickets';
@@ -10,13 +9,13 @@ function EditOrder() {
 
   const retrieveOrder = Tickets.filter((item)=> item.id == id); // Retrieve Order = Recuperar pedido
 
-const [order, setOrder] = useState ({
-  id:retrieveOrder[0].id,
-  name:retrieveOrder[0].name,
-  code:retrieveOrder[0].code,
-  block:retrieveOrder[0].block,
-  apartament:retrieveOrder[0].apartament,
-  carrier:retrieveOrder[0].id,
+  const [order, setOrder] = useState ({
+    id:retrieveOrder[0].id,
+    name:retrieveOrder[0].name,
+    code:retrieveOrder[0].code,
+    block:retrieveOrder[0].block,
+    apartament:retrieveOrder[0].apartament,
+    carrier:retrieveOrder[0].carrier,
 });
 
  // Atualiza o estado com os valores dos inputs
