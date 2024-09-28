@@ -1,21 +1,23 @@
-// // import {  } from 'react';
-// import { useNavigate } from 'react-router-dom';
+// import {  } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-// function LogoutButton() {
-//   const navigate = useNavigate();
+function LogoutButton() {
+  const navigate = useNavigate();
 
-//   const handleLogout = () => {
-//     // Remover token do localStorage
-//     localStorage.removeItem('authToken');
+  const handleLogout = () => {
+    // Remover token do localStorage
+    localStorage.removeItem('authToken');
 
-//     // Redirecionar para a página de login
-//     navigate('/Login');
-//   }
+    // Redirecionar para a página de login
+    navigate('/Login');
+  }
 
-//   return (
-//     <>
-    
-//     </>
-//   )
-// }
-// export default LogoutButton;
+  return (
+    <>
+      <button onClick={handleLogout}>
+        Logout
+      </button>
+    </>
+  )
+}
+export default LogoutButton;
