@@ -15,7 +15,7 @@ function LogoutButton() {
   return (
     <>
       <button onClick={handleLogout}>
-        Logout
+        Encerrar sessão
       </button>
     </>
   )
