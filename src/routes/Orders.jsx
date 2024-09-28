@@ -19,6 +19,9 @@ function Orders() {
       <AppTitle />
       <section>
         <div>
+         <Link to="/NewOrder">Novo Pedido</Link>
+        </div>
+        <div>
           <table>
             <thead>
               <tr>
@@ -35,7 +38,7 @@ function Orders() {
                 <tr key={indice}>
                   <td>{item.id}</td>
                   <td>{item.name}</td>
-                  <td>{item.token}</td>
+                  <td>{item.code}</td>
                   <td>{item.block}</td>
                   <td>{item.apartament}</td>
                   <td>{item.carrier}</td>
@@ -51,9 +54,6 @@ function Orders() {
                 </tr>
               ))}
             </tbody>
-            <div>
-              <Link to="NewOrder">Novo Pedido</Link>
-            </div>
           </table>
         </div>
       </section>
