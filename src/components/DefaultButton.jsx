@@ -1,10 +1,10 @@
 import {} from 'react'
 
-function ButtonDefault() {
+function DefaultButton() {
   return (
     <>
 
     </>
   )
 }
-export default ButtonDefault;
+export default DefaultButton;
