@@ -1,10 +1,10 @@
 // import {} from 'react'
 
-function NewOrderButton() {
+function EditOrder() {
   return (
     <>
 
     </>
   )
 }
-export default NewOrderButton;
+export default EditOrder;

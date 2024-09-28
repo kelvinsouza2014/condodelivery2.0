@@ -9,6 +9,8 @@ import Register from './routes/Register.jsx'
 import Authentication from './routes/Authentication.jsx'
 import Orders from './routes/Orders.jsx'
 import NewOrder from './routes/NewOrder.jsx'
+import EditOrder from './routes/NewOrder.jsx'
+import DeleteOrder from './routes/NewOrder.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,8 @@ const router = createBrowserRouter([
       {path:'/Authentication', element:<Authentication />},
       {path:'/Orders', element:<Orders />},
       {path:'/NewOrder', element:<NewOrder />},
+      {path:'/EditOrder/:id', element:<EditOrder />},
+      {path:'/DeleteOrder/:id', element:<DeleteOrder />},
     ]
   }
 ])

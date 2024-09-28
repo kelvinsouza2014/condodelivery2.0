@@ -1,11 +1,11 @@
 import {} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faCircleQuestion as Question } from '@fortawesome/free-solid-svg-icons';
 
 function Help() {
   return (
     <>
-      <FontAwesomeIcon icon={faCircleQuestion} />
+      <FontAwesomeIcon icon={Question} />
       <a href="#">Ajuda</a>
     </>
   )
