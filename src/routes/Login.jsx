@@ -1,6 +1,7 @@
 import TemporaryLinks from '../components/TemporaryLinks';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CryptoJS from 'crypto-js';
 import Help from '../components/Help.jsx'
 import Mark00 from '../components/Mark00.jsx';
 
@@ -10,35 +11,42 @@ function Login() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  const secretKey = 'your-secret-key';
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const loginData = {
-      email,
-      password,
-    };
+// Obter os dados criptografados
+const encryptedData = localStorage.getItem('userData');
+if (!encryptedData) {
+  alert('Usuário não encontrado!');
+  return;
+}
 
-    try {
-      const response = await fetch('http://localhost:5000/api/login', { // Link do Back-End
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(loginData),
-      });
+try {
+  // Descriptografar os dados do usuário
+  const bytes = CryptoJS.AES.decrypt(encryptedData, secretKey);
+  const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 
-      if (response.ok) {
-        const data = await response.json();
-        sessionStorage.setItem('token', data.token);
-        alert('Login bem-sucedido!');
-        navigate('/Orders'); // Redireciona para a tela inicial da aplicação
-      } else {
-        alert('Usuário ou senha incorretos!');
-      }
-    } catch (error) {
-      console.error('Erro ao tentar logar:', error);
-      alert('Erro ao comunicar com o servidor.');
-    }
+  // Verificar se as credenciais estão corretas
+  if (decryptedData.email === email && decryptedData.password === password) {
+    // Gerar token de sessão
+    const token = 
+      Math.random().toString(16).substring(2) + 
+      Math.random().toString(16).substring(2);
+
+    sessionStorage.setItem('token', token);
+
+    alert('Login bem-sucedido!');
+    navigate('/Orders'); // Redireciona para a tela de pedidos
+  } else {
+    alert('Usuário ou senha incorretos!');
+  }
+
+} catch (error) {
+  console.error('Erro ao tentar logar:', error);
+  alert('Erro ao tentar logar.');
+}
   };
 
   return (

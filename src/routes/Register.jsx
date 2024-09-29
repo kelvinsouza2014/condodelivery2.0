@@ -1,6 +1,7 @@
 import TemporaryLinks from '../components/TemporaryLinks';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CryptoJS from 'crypto-js';
 import Help from '../components/Help.jsx'
 import Mark01 from '../components/Mark01.jsx';
 
@@ -10,6 +11,9 @@ function Register() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
+
+  // Chave secreta para criptografia
+  const secretKey = 'your-secret-key';
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -30,23 +34,17 @@ function Register() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/register', { // Link do Back-End
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData),
-      });
+      // Criptografar os dados antes de salvar no LocalStorage
+      const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(userData), secretKey).toString();
+      
+      localStorage.setItem('userData', encryptedData);
 
-      if (response.ok) {
-        alert('Cadastro realizado com sucesso!');
-        navigate('/login'); // Redireciona para a tela de login após o cadastro
-      } else {
-        alert('Erro no cadastro');
-      }
+      alert('Cadastro realizado com sucesso! (Dados criptografados)');
+      navigate('/Login'); // Redireciona para a tela de login após o cadastro
+
     } catch (error) {
-      console.error('Erro na requisição:', error);
-      alert('Erro ao comunicar com o servidor.');
+      console.error('Erro ao armazenar os dados:', error);
+      alert('Erro ao armazenar os dados.');
     }
   };
 
