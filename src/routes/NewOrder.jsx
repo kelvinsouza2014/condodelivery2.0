@@ -36,7 +36,6 @@ function NewOrder() {
   return (
     <>
       <TemporaryLinks />
-      {/* <h1>Novo Pedido</h1> */}
       <AppTitle />
       <section>
         <form onSubmit={handleSubmit}>

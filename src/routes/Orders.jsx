@@ -13,7 +13,6 @@ function Orders() {
   return (
     <>
       <TemporaryLinks />
-      {/* <h1>Pedidos</h1> */}
       <LogoutButton />
       <AppTitle />
       <section>

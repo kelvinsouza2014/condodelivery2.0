@@ -28,7 +28,6 @@ function Authentication() {
   return (
     <>
     <TemporaryLinks />
-      {/* <h1>Autenticação</h1> */}
       <Help />
       <Mark01 />
       <section>

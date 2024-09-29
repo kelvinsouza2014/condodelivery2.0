@@ -53,7 +53,6 @@ function Register() {
   return (
     <>
         <TemporaryLinks />
-      {/* <h1>Cadastro</h1> */}
       <Help />
       <Mark01 />
       <div>
