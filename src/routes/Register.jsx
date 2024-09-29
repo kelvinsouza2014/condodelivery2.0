@@ -51,8 +51,8 @@ function Register() {
   };
 
   return (
-    <>
-        <TemporaryLinks />
+    <div>
+      <TemporaryLinks />
       <Help />
       <Mark01 />
       <div>
@@ -77,7 +77,7 @@ function Register() {
           <button onClick={() => navigate("/Login")}>Fazer login</button>
         </form>
     </div>
-    </>
+    </div>
   )
 }
 export default Register;

@@ -26,8 +26,8 @@ function Authentication() {
   };
 
   return (
-    <>
-    <TemporaryLinks />
+    <div>
+      <TemporaryLinks />
       <Help />
       <Mark01 />
       <section>
@@ -47,7 +47,10 @@ function Authentication() {
         </form>
       </section>
       <Credits />
-    </>
+      <div>
+        <button onClick={() => alert("O token de autenticação é: 123456")}>Token</button>
+      </div>
+    </div>
   )
 }
 export default Authentication;

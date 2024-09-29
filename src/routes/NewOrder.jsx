@@ -34,7 +34,7 @@ function NewOrder() {
   }
 
   return (
-    <>
+    <div>
       <TemporaryLinks />
       <AppTitle />
       <section>
@@ -115,7 +115,7 @@ function NewOrder() {
           </div>
         </form>
       </section>
-    </>
+    </div>
   )
 }
 export default NewOrder;

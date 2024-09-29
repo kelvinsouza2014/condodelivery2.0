@@ -11,7 +11,7 @@ const Orders =
 
 function Orders() {
   return (
-    <>
+    <div>
       <TemporaryLinks />
       <LogoutButton />
       <AppTitle />
@@ -55,7 +55,7 @@ function Orders() {
           </table>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 export default Orders;

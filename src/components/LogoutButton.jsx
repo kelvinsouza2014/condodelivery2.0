@@ -12,11 +12,11 @@ function LogoutButton() {
   }
 
   return (
-    <>
+    <div>
       <button onClick={handleLogout}>
         Encerrar sessão
       </button>
-    </>
+    </div>
   )
 }
 export default LogoutButton;

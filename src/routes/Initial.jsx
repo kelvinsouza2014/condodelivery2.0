@@ -9,9 +9,8 @@ function Initial() {
   const navigate = useNavigate();
 
   return (
-    <>
+    <div>
       <TemporaryLinks />
-      {/* <h1>Inicial</h1> */}
       <Help />
       <Mark00 />
       <div>
@@ -21,7 +20,7 @@ function Initial() {
       <button onClick={() => navigate("/Login")}>Fazer login</button>
       </div>
       <Credits />
-    </>
+    </div>
   )
 }
 

@@ -42,9 +42,8 @@ function Login() {
   };
 
   return (
-    <>
+    <div>
       <TemporaryLinks />
-      {/* <h1>Login</h1> */}
       <Help />
       <Mark00 />
       <section>
@@ -67,7 +66,7 @@ function Login() {
           </button>
         </div>
     </section>
-    </>
+    </div>
   )
 }
 export default Login;
