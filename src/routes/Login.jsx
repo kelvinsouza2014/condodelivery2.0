@@ -38,7 +38,7 @@ try {
     sessionStorage.setItem('token', token);
 
     alert('Login bem-sucedido!');
-    navigate('/Orders'); // Redireciona para a tela de pedidos
+    navigate('/Authentication'); // Redireciona para a tela de autenticação
   } else {
     alert('Usuário ou senha incorretos!');
   }
