@@ -19,9 +19,6 @@ div .box-register-form {
   display: block;
   align-itens: center;
   width: 250px;
-  // height: 30px;
-  // padding: 15px 10px;
-  // margin: 0 auto;
 }
 
 div input {

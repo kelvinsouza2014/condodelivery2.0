@@ -3,6 +3,7 @@ import AppTitle from '../components/AppTitle';
 import { useState } from 'react';
 import { Tickets } from '../components/Tickets';
 import { useNavigate } from 'react-router-dom';
+import { StyleComponentNewOrder } from '../css/StyleComponentNewOrder';
 
 function NewOrder() {
 
@@ -34,6 +35,7 @@ function NewOrder() {
   }
 
   return (
+    <StyleComponentNewOrder>
     <div>
       <TemporaryLinks />
       <AppTitle />
@@ -42,6 +44,7 @@ function NewOrder() {
           <p>
             <label>
               Nome:
+            </label>
                 <input 
                 type="text" 
                 name="name" 
@@ -51,11 +54,11 @@ function NewOrder() {
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
           <p>
             <label>
               Código do pedido:
+            </label>
                 <input 
                 type="number" 
                 name="code" 
@@ -65,11 +68,11 @@ function NewOrder() {
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
           <p>
             <label>
               Bloco do condomínio:
+            </label>
                 <input 
                 type="text" 
                 name="block" 
@@ -79,11 +82,11 @@ function NewOrder() {
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
           <p>
             <label>
               Número do apartamento:
+            </label>
                 <input 
                 type="number" 
                 name="apartament" 
@@ -93,11 +96,11 @@ function NewOrder() {
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
           <p>
             <label>
               Nome da transportadora:
+            </label>
                 <input 
                 type="text" 
                 name="carrier" 
@@ -107,7 +110,6 @@ function NewOrder() {
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
           <div>
             <button type="submit">Novo Pedido</button>
@@ -116,6 +118,7 @@ function NewOrder() {
         </form>
       </section>
     </div>
+    </StyleComponentNewOrder>
   )
 }
 export default NewOrder;
