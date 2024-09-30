@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Tickets } from '../components/Tickets';
+import { StyleComponentEditOrder } from '../css/StyleComponentEditOrder';
 
 function EditOrder() {
 
@@ -37,11 +38,13 @@ const handleSubmit =(e)=>{
 }
 
   return (
+    <StyleComponentEditOrder>
     <section>
         <form onSubmit={handleSubmit}>
           <p>
             <label>
               Nome:
+            </label>
                 <input 
                 type="text" 
                 name="name" 
@@ -51,11 +54,11 @@ const handleSubmit =(e)=>{
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
           <p>
             <label>
               Código do pedido:
+            </label>
                 <input 
                 type="number" 
                 name="code" 
@@ -65,11 +68,11 @@ const handleSubmit =(e)=>{
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
           <p>
             <label>
               Bloco do condomínio:
+            </label>
                 <input 
                 type="text" 
                 name="block" 
@@ -79,11 +82,11 @@ const handleSubmit =(e)=>{
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
           <p>
             <label>
               Número do apartamento:
+            </label>
                 <input 
                 type="number" 
                 name="apartament" 
@@ -93,11 +96,11 @@ const handleSubmit =(e)=>{
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
           <p>
             <label>
               Nome da transportadora:
+            </label>
                 <input 
                 type="text" 
                 name="carrier" 
@@ -107,14 +110,14 @@ const handleSubmit =(e)=>{
                 onChange={handleChange}
                 required
                 />
-            </label>
           </p>
-          <div>
+          <div className="box-buttons-editorder">
             <button type="submit">Salvar</button>
             <button onClick={() => navigate("/Orders")}>Cancelar Pedido</button>
           </div>
         </form>
       </section>
+      </StyleComponentEditOrder>
   )
 }
 export default EditOrder;

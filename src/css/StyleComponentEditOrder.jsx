@@ -4,28 +4,38 @@ import styled from "styled-components";
 
 export const StyleComponentEditOrder = styled.div `
 
-div form {
-text-align: center;
+section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
+  
+  section div {
+    // width: 400px;
+    // margin: 0 auto;
+    // margin-bottom: 30px;
 }
 
-div p {
-  margin: 0 auto;
+section p {
   width: 400px;
+  height: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
 }
 
-div label {
-  margin-bottom: 10px auto;
+section input {
+  height: 15px;
 }
 
-div input {
-  display: block;
-  width: 250px;
-  height: 30px;
-  padding: 15px 10px;
-  margin: 10px auto;
+section .box-buttons-editorder {
+  margin: 20px;
+  flex-basis: 100%;
 }
 
-div button {
+section .box-buttons-editorder button {
+  margin: 5px;
+  flex-basis: 100%;
   width: 150px;
   height: 30px;
   font-size: 1rem;
