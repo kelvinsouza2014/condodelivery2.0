@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import CryptoJS from 'crypto-js';
 import Help from '../components/Help.jsx'
 import Mark01 from '../components/Mark01.jsx';
+import { StyleComponentRegister } from '../css/StyleComponentRegister.jsx';
 
 function Register() {
 
@@ -53,28 +54,32 @@ function Register() {
       <TemporaryLinks />
       <Help />
       <Mark01 />
+      <StyleComponentRegister>
       <div>
         <h2>Cadastro</h2>
         <form onSubmit={handleRegister}>
+          <div className="box-register-form">
           <label>
             E-mail:
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           <br />
           <label>
             Senha:
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </label>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           <br />
           <label>
             Confirmar Senha:
-            <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
           </label>
+            <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
           <br />
           <button type="submit">Cadastrar</button>
           <button onClick={() => navigate("/Login")}>Fazer login</button>
+          </div>
         </form>
-    </div>
+      </div>
+      </StyleComponentRegister>
     </div>
   )
 }
