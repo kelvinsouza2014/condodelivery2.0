@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import CryptoJS from 'crypto-js';
 import Help from '../components/Help.jsx'
 import Mark00 from '../components/Mark00.jsx';
+import { StyleComponentLogin } from '../css/StyleComponentLogin.jsx';
 
 function Login() {
 
@@ -54,26 +55,28 @@ try {
       <TemporaryLinks />
       <Help />
       <Mark00 />
+      <StyleComponentLogin>
       <section>
         <form onSubmit={handleLogin}>
           <label>
-            E-mail:
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            E-mail:<br />
+            <input placeholder="Entre com o seu e-mail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </label>
           <br />
           <label>
-            Senha:
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            Senha:<br />
+            <input placeholder="Digite sua senha" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </label>
           <br />
-          <button type="submit">Entrar</button>
+          <button className="submit-button-login" type="submit">Entrar</button>
         </form>
         <div>
-          <button onClick={() => navigate("/Register")}>
+          <button className="submit-button-register" onClick={() => navigate("/Register")}>
             Cadastre-se
           </button>
         </div>
     </section>
+    </StyleComponentLogin>
     </div>
   )
 }
