@@ -21,7 +21,7 @@ div h1 {
     div p {
       font-size: 2rem;
       font-weight: 500;
-      margin: 15px;
+      margin: 15px auto;
       color: #4c2e6d;
 }
 
