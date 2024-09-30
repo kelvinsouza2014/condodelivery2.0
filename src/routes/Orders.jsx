@@ -35,7 +35,7 @@ function Orders() {
                 <th>Transportadora</th>
               </tr>
             </thead>
-            <tbody className="OrderBlock">
+            <tbody>
               {Tickets.map((item,indice)=>(
                 <tr key={indice}>
                   <td>{item.id}</td>

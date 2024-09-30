@@ -10,7 +10,7 @@ div {
 }
 
 div h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   // margin: 0 auto;
   color: #5936A4;
