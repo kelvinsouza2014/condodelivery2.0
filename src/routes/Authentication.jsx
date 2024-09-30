@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import Help from '../components/Help.jsx'
 import Mark01 from '../components/Mark01.jsx';
 import Credits from '../components/Credits.jsx';
+import { StyleComponentMark01 } from '../css/StyleComponentMark01';
+import { StyleComponentAuthentication } from '../css/StyleComponentAuthentication';
 
 function Authentication() {
   
@@ -26,15 +28,18 @@ function Authentication() {
   };
 
   return (
+    <StyleComponentAuthentication>
     <div>
       <TemporaryLinks />
       <Help />
       <Mark01 />
       <section>
+        <StyleComponentMark01>
         <div>
           <p>Insira o código de 6 dígitos que enviamos para o seu numero que termina em 6789, para concluir a configuração de autenticação de dois fatores.
           </p>
         </div>
+        </StyleComponentMark01>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -43,14 +48,15 @@ function Authentication() {
             value={token}
             onChange={(e) => setToken(e.target.value)}
             />
-          <button type="submit">Avançar</button>
+          <button className="submit-button-authentication" type="submit">Avançar</button>
         </form>
       </section>
       <Credits />
       <div>
-        <button onClick={() => alert("O token de autenticação é: 123456")}>Token</button>
+        <button className="token-button-authentication" onClick={() => alert("O token de autenticação é: 123456")}>Token</button>
       </div>
     </div>
+    </StyleComponentAuthentication>
   )
 }
 export default Authentication;
