@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Tickets } from '../components/Tickets';
+import { StyleComponentDeleteOrder } from '../css/StyleComponentDeleteOrder';
 
 function DeleteOrder() {
 
@@ -31,6 +32,7 @@ const handleDelete =(e)=>{
 }
 
   return (
+    <StyleComponentDeleteOrder>
     <section>
       <div>
         <p>Nome: {order.name}</p>
@@ -39,11 +41,12 @@ const handleDelete =(e)=>{
         <p>Número do apartamento: {order.apartament}</p>
         <p>Nome da transportadora: {order.carrier}</p>
       </div>
-      <div>
+      <div className="box-buttons-deleteorder">
         <button onClick={handleDelete}>Excluir Pedido</button>
         <button onClick={() => navigate("/Orders")}>Cancelar Pedido</button>
       </div>
     </section>
+    </StyleComponentDeleteOrder>
   )
 }
 export default DeleteOrder;
