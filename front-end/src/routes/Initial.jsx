@@ -10,6 +10,7 @@ function Initial() {
 
   return (
     <div>
+      <h1>Hello</h1>
       <TemporaryLinks />
       <Help />
       <Mark00 />
