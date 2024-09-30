@@ -11,6 +11,7 @@ import Orders from './routes/Orders.jsx'
 import NewOrder from './routes/NewOrder.jsx'
 import EditOrder from './routes/EditOrder.jsx'
 import DeleteOrder from './routes/DeleteOrder.jsx'
+import GlobalStyle from './css/GeneralStyle.jsx'
 
 const router = createBrowserRouter([
   {
@@ -36,5 +37,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <GlobalStyle />
   </StrictMode>,
 )

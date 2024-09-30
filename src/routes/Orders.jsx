@@ -6,20 +6,24 @@ import { Tickets } from '../components/Tickets';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil as Edit} from '@fortawesome/free-solid-svg-icons';
 import { faTrash as Delete} from '@fortawesome/free-solid-svg-icons';
+import { StyleComponentButtonSecondary } from '../css/StyleComponentButtonSecondary';
+import { StyleComponentOrderBlock } from '../css/StyleComponentOrderBlock';
 
 const Orders = 
 
 function Orders() {
   return (
     <div>
+    <StyleComponentButtonSecondary>
+      <StyleComponentOrderBlock>
       <TemporaryLinks />
       <LogoutButton />
       <AppTitle />
       <section>
-        <div>
-         <Link to="/NewOrder">Novo Pedido</Link>
+        <div className="box-button-secondary">
+         <Link to="/NewOrder" className="button-secondary">Novo Pedido</Link>
         </div>
-        <div>
+        <div className="box-order-block">
           <table>
             <thead>
               <tr>
@@ -31,7 +35,7 @@ function Orders() {
                 <th>Transportadora</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="OrderBlock">
               {Tickets.map((item,indice)=>(
                 <tr key={indice}>
                   <td>{item.id}</td>
@@ -41,11 +45,11 @@ function Orders() {
                   <td>{item.apartament}</td>
                   <td>{item.carrier}</td>
                   <td>
-                    <Link to={`/EditOrder/${item.id}`}>
+                    <Link to={`/EditOrder/${item.id}`} className="order-block-icons">
                     <FontAwesomeIcon icon={Edit} />
                     </Link>
-                    |
-                    <Link to={`/DeleteOrder/${item.id}`}>
+                    
+                    <Link to={`/DeleteOrder/${item.id}`} className="order-block-icons">
                     <FontAwesomeIcon icon={Delete} />
                     </Link>
                   </td>
@@ -55,6 +59,8 @@ function Orders() {
           </table>
         </div>
       </section>
+      </StyleComponentOrderBlock>
+    </StyleComponentButtonSecondary>
     </div>
   )
 }
