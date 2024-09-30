@@ -4,7 +4,7 @@ function AppTitle() {
   return (
     <StyleComponentAppTitle>
     <div>
-      <h1>Condodelivery</h1>
+      <h1>CondoDelivery</h1>
     </div>
     </StyleComponentAppTitle>
   )
