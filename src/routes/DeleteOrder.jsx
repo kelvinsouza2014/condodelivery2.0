@@ -43,7 +43,7 @@ const handleDelete =(e)=>{
       </div>
       <div className="box-buttons-deleteorder">
         <button onClick={handleDelete}>Excluir Pedido</button>
-        <button onClick={() => navigate("/Orders")}>Cancelar Pedido</button>
+        <button onClick={() => navigate("/Orders")}>Cancelar</button>
       </div>
     </section>
     </StyleComponentDeleteOrder>
