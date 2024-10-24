@@ -113,7 +113,7 @@ const handleSubmit =(e)=>{
           </p>
           <div className="box-buttons-editorder">
             <button type="submit">Salvar</button>
-            <button onClick={() => navigate("/Orders")}>Cancelar Pedido</button>
+            <button onClick={() => navigate("/Orders")}>Cancelar</button>
           </div>
         </form>
       </section>
